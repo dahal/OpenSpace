@@ -1,0 +1,61 @@
+
+	<!--Image Book Now starts here-->
+	<div class="container"><!--Div for Container-->		
+		<div class="col-md-7">	
+			<div class="tile">
+			<h2 class="tile-title"><%= @space_detail.city %> | <%= @space_detail.state %></h2><br/>
+				<%= image_tag @space_detail.image.url ,:height=>"600",:width=>"600" %><br />
+				<!--<img src="http://placehold.it/600x600"><br>-->
+			</div>
+		</div>
+
+	    <div class="col-md-5">
+	      <div class="tile">
+	        <h2 class="tile-title">Details</h2> 
+	      </div>
+			<table class="table"> 
+		        <tbody>  
+		          <tr>  
+		            <td>Area:</td>  
+		            <td><%= @space_detail.area %> Sq. Ft.</td>
+		            <td></td>  
+		          </tr> 
+
+		          <tr>  
+		            <td>Price:</td>  
+		            <td>$ <%= @space_detail.price %>.00 </td>
+		            <td></td>
+		          </tr> 
+
+		          <tr>  
+		            <td>Address:</td>  
+		            <td><%= @space_detail.address1 %>, <%= @space_detail.address2 %><br/><%= @space_detail.city %>, <%= @space_detail.state %>-<%= @space_detail.zipcode %></td>
+		            <td></td> 
+		          </tr>
+
+		          <tr>  
+		            <td>Book For</td>  
+		            <td>3 Months</td>
+		            <td></td> 
+		          </tr>
+
+		          <tr>  
+		            <td></td>  
+		            <td><a class="btn btn-primary btn-large btn-block" href="#">Book Now</a></td>
+		            <td></td> 
+		          </tr>
+		        </tbody>  
+			</table>  
+	    </div>
+	</div><br/><br/><!--DIV for container ends -->
+	<!-- Image and book now ends here -->
+
+	<!--Desctiption Starts-->
+	<div class="container"><!--DIV for container starts here -->
+			<div class="col-md-12">		
+				<h2 class="tile-title">Desctiption</h2><br/>
+				<p>Desctiption paragraph</p>		
+			</div>
+	</div> <!--DIV for container ends -->
+	<!--Description ends here-->
+

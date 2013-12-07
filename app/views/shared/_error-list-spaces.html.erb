@@ -1,0 +1,12 @@
+<% if @list_space.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      The form contains <%= pluralize(@list_space.errors.count, "error") %>.
+    </div>
+    <ul>
+    <% @list_space.errors.full_messages.each do |msg| %>
+      <li class = "alert-danger"> <%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

@@ -1,0 +1,59 @@
+
+<div class="col-md-6">
+<div class = "center-form">
+  <%= form_for(@list_space) do |f| %>
+    <%= render 'shared/error-list-spaces' %>
+
+          <div class="form-group input-group">
+            <%= f.label :price, "$", :class => "input-group-addon" %>
+            <%= f.text_field :price, :class => "form-control text", :placeholder => "Enter the price eg. 1500 " %>
+          </div>
+
+          <div class="form-group input-group">
+            <%= f.text_field :area, :class => "form-control text", :placeholder => "Enter the area eg. 1000 " %>
+            <%= f.label :area, "Sq.ft", :class => "input-group-addon" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.text_field :address1, :class => "form-control text", :placeholder => "Enter the address 1" %> 
+          </div>
+
+          <div class="form-group">
+            <%= f.text_field :address2, :class => "form-control text", :placeholder => "Suite/Building Number" %>   
+          </div>
+
+          <div class="form-group">
+            <%= f.text_field :city, :class => "form-control text", :placeholder => "City" %>   
+          </div>
+
+          <div class="form-group">
+            <%= f.text_field :state, :class => "form-control text", :placeholder => "State" %> 
+          </div>
+
+          <div class="form-group">
+            <%= f.text_field :zipcode, :class => "form-control text", :placeholder => "Zipcode", :rows => "4"%>
+          </div>
+
+          </div>
+
+          <div class="form-group">
+            <%= f.label :available_date, "Available Date", :class => "h6" %><br />
+            <%= f.date_select :available_date, :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :image, "Upload the Image", :class => "h6" %><br />
+            <%= f.file_field :image, :class => "btn btn-inverse btn-sm" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :description, :class => "h6" %><br />
+            <%= f.text_area :description, :rows => "4" %>
+          </div>
+
+          
+            <%= f.submit "Submit the Form",:class => "btn btn-success btn-lg", :disable_with => "Submitting..." %>
+  <% end %>
+</div>
+</div>
+<div class="col-md-3"></div>
+<div class="col-md-3"></div>

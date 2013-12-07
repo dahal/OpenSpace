@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @list_space.image.url ,:height=>"200",:width=>"200"%>
+
+<p>
+  <b>Description:</b>
+  <%= @list_space.description %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @list_space.price %>
+</p>
+
+<p>
+  <b>Area:</b>
+  <%= @list_space.area %>
+</p>
+
+<p>
+  <b>Address1:</b>
+  <%= @list_space.address1 %>
+</p>
+
+<p>
+  <b>Address2:</b>
+  <%= @list_space.address2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @list_space.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @list_space.state %>
+</p>
+
+<p>
+  <b>Zipcode:</b>
+  <%= @list_space.zipcode %>
+</p>
+
+<p>
+  <b>Available date:</b>
+  <%= @list_space.available_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_list_space_path(@list_space) %> |
+<%= link_to 'Back', list_spaces_path %>

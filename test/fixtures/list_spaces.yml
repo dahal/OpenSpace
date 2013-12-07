@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  description: MyText
+  price: 9.99
+  area: 1.5
+  address1: MyString
+  address2: MyString
+  city: MyString
+  state: MyString
+  zipcode: MyString
+  available_date: 2013-12-03
+
+two:
+  description: MyText
+  price: 9.99
+  area: 1.5
+  address1: MyString
+  address2: MyString
+  city: MyString
+  state: MyString
+  zipcode: MyString
+  available_date: 2013-12-03

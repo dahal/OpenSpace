@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OpenSpace</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+  <body>
+<!--### CONTAINER STARTS ###-->    
+    <div class="container">
+
+<!-- NAVBAR STARTS -->
+        <div class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-collapse-01"></button>
+            </div>            
+            <div class="navbar-collapse collapse navbar-collapse">
+              <ul class="nav navbar-nav navbar-left">
+                
+                <li>
+                    <%= link_to "OpenSpace", root_path %>
+                </li>
+                
+                
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+              
+              <li> 
+                <% if session[:admin] %>
+                
+                  <%= link_to "Logout",:controller=>"admins", :action => "logout" %>
+                <% else %>
+                  <%= link_to "Login", :controller=>"admins", :action => "login" %>
+                <% end %>
+                
+              </li>
+              </ul>
+            </div><!--/.nav -->
+          </div>
+<!-- NAVBAR ENDS -->
+	
+		<%= yield %>
+    </div>
+<!--### CONTAINER ENDS ###-->
+
+
+  </body>
+</html>

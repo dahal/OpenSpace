@@ -1,0 +1,51 @@
+
+<!--Account stuffs starts here-->
+
+<div class="row demo-tiles">
+        <div class="col-md-2">
+          <div class="tile">
+            <img src="/assets/avatar.png" alt="Avatar" class="tile-image big-illustration">
+          </div>
+        </div>
+
+        <div class="col-md-10">
+          <div class="tile">
+            <h2 class="tile-title">Welcome, <%= @user.login_name %></h2> 
+          </div>
+		        <table class="table"> 
+		        <tbody>  
+		          <tr>  
+		            <td>Name:</td>  
+		            <td><%= @user.login_name %></td>
+		            <td></td>  
+		          </tr> 
+
+		          <tr>  
+		            <td>Email:</td>  
+		            <td><%= @user.login_email %></td>
+		            <td></td>  
+		          </tr> 
+
+		          <tr>  
+		            <td>Password:</td>  
+		            <td>********* (Hidden)  <%= link_to "Reset Password", :action=>"reset_password" %> </td>
+		            <td></td> 
+		          </tr>
+
+		          <tr>  
+		            <td>Address:</td>  
+		            <td><%#= @user.address %></td>
+		            <td></td>  
+		          </tr>
+
+		          <tr>  
+		            <td></td>
+		            <td></td>
+		            <td><%#= link_to "Update Account", :action=>"update_account" %></td>  
+		          </tr>
+		        </tbody>  
+		      </table>  
+    </div>
+</div>
+
+

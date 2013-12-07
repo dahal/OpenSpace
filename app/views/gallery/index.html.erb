@@ -1,0 +1,41 @@
+<!-- DEMO TILES STARTS -->
+    
+          <div class="tile">
+            <br><br><br><br>
+            <h2>Have business in mind?</h2>
+            <h1 class="tile-title">Open your storefront at best place possible...</h1><br>
+            <!-- Search starts -->
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              
+                <div class="form-group">
+                            <input type="search" value="Find the best spot for your business:- Search by City" class="form-control col-md-6" />
+                            <span class="input-icon fui-search"></span>
+                        </div>   
+            </div>
+            <div class="col-md-3"></div>
+            <!-- Search ends -->
+            <br><br><br><br>
+            
+          </div>
+          <hr>
+        
+<!-- DEMO TILES ENDS -->
+
+<!-- #1 THREE TILES STARTS -->
+<h2 class="demo-section-title mbl pbl">Featured Places</h2>
+<% @space_gallery.each do |space|%> 
+    <div class="demo-tiles">
+        <div class="col-md-4">
+            <div class="tile">
+                <h3 class="tile-title"><%= space.city %>  |  <%= space.state %></h3><br />
+    	        <%= image_tag space.image.url ,:height=>"320",:width=>"320" %><br />
+    	        <span><i class="fui-location"></i><%= space.address1 %>, <%= space.zipcode %></span><br />
+                <span><i class="fui-lock"></i>$ <%= space.price %> / Month</span><br>
+                <span><i class="fui-plus"></i><%= space.area %> Sq. Ft.</span><br>
+                <td><%= button_to 'View Details', @space_detail_path, :class=>"btn btn-danger btn-large btn-block" %></td>      
+    		    <%#= button_to 'View Details', space_detail_path(:space_id => space.id), :class=>"btn btn-danger btn-large btn-block" %>    
+            </div>
+        </div>
+    </div>
+<% end %>          
