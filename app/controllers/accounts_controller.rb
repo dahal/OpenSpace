@@ -77,4 +77,11 @@ class AccountsController < ApplicationController
     redirect_to :action=>"login"
   end
 
+  def update
+    def edit
+    @user = User.find(params[:id])
+  end
+    
+  end
+
 end

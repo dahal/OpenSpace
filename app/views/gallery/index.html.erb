@@ -33,8 +33,7 @@
     	        <span><i class="fui-location"></i><%= space.address1 %>, <%= space.zipcode %></span><br />
                 <span><i class="fui-lock"></i>$ <%= space.price %> / Month</span><br>
                 <span><i class="fui-plus"></i><%= space.area %> Sq. Ft.</span><br>
-                <td><%= button_to 'View Details', @space_detail_path, :class=>"btn btn-danger btn-large btn-block" %></td>      
-    		    <%#= button_to 'View Details', space_detail_path(:space_id => space.id), :class=>"btn btn-danger btn-large btn-block" %>    
+                <td><%= button_to 'View Details', {:controller=>"gallery",:action=>"detail",:id=>space.id}, :class=>"btn btn-danger btn-large btn-block" %></td>        
             </div>
         </div>
     </div>

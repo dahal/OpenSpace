@@ -1,8 +1,10 @@
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :hashed_password, :login_email, :login_name,:password,:password_confirmation
+  attr_accessible :hashed_password, :login_email, :login_name,:password,:password_confirmation, :avatar
+  has_attached_file :avatar
   validates :login_email, :uniqueness => true, :length => { :within => 5..50 },:format => { :with => /^[^@][\w.-]+@[\w.-]+[.][a-z]{2,4}$/i }
   validates :password, :confirmation => true, :length => {:within => 6..20},:presence => true
+
 
   # To encrypt the password
   	#1. enctypt_new_password (call back)
