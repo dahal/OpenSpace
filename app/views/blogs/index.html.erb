@@ -1,0 +1,61 @@
+  <!--BLOG INDEX PAGE STARTS -->
+    <!-- Blog TILES STARTS -->
+      <div class="tile">
+        <h2>OpenSpace</h2>
+        <h1 class="tile-title">Blog</h1><br>
+      </div>
+      <hr>
+    <!-- Blog TILES ENDS -->
+
+    <!--blog content starts-->
+    <div class = "container">
+      <div class="col-md-8">
+        <% @blogs.each do |blog| %>
+          <h4><%= link_to blog.title, blog %></h4>
+          <p><span class="input-icon fui-user"></span><%= blog.name %><span class="label label-success">Dec 05 2013</span></p>
+          
+          <hr>
+          <!--<img src="http://placehold.it/600x200">-->
+          <%= image_tag blog.image.url ,:height=>"200",:width=>"600"%>
+          <p><%= blog.content %> </p>
+          
+          <button class = "btn btn-danger btn-sm"><%= link_to 'Continue Reading', blog %></button>
+          <%= link_to 'Edit', edit_blog_path(blog) %>
+          <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'New Blog Post', new_blog_path %>
+          <hr><hr>
+        <% end %>
+        
+
+      </div>
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h5>Social Media</h5>
+              </div>
+              <div class="panel-body">
+                <p>Facebook</p><hr>
+                <p>Twitter</p><hr>
+                <p>Google Plus</p><hr>
+                <p>Instagram</p><hr>
+              </div>
+          </div>
+
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                <h5>Recent Posts</h5>
+              </div>
+              <div class="panel-body">
+                <% @blogs.each do |blog| %>
+                <p><%= link_to blog.title, blog %><hr>
+                <% end %>
+              </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+    </div>
+    <!--blog content ends-->
+    <!--BLOG INDEX PAGE ENDS -->

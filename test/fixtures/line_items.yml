@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cart_id: 1
+  list_space_id: 1
+  month: 1
+
+two:
+  cart_id: 1
+  list_space_id: 1
+  month: 1
