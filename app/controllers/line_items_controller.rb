@@ -41,35 +41,20 @@ class LineItemsController < ApplicationController
   # POST /line_items.json
   def create
     @cart = current_cart
-    spece=ListSpace.find(params[:id])
-    @line_item = @cart.add_space(space.id)
-
-    respond_to do |format|
-      if @line_item.save
-        format.html { redirect_to @line_item.cart, notice: 'Line item was successfully created.' }
-        format.js { @current_item = @line_item }
-        format.json { render json: @line_item, status: :created, location: @line_item }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @line_item.errors, status: :unprocessable_entity }
-      end
-    end
-  end 
-
-  # PUT /line_items/1
-  # PUT /line_items/1.json
-  def update
-    @line_item = LineItem.find(params[:id])
-
+    list_space = ListSpace.find(params[:id])
+    @line_item = @cart.add_space(list_space.id)
+    @line_item.month = params[:no_of_months]
+   
     respond_to do |format|
-      if @line_item.update_attributes(params[:line_item])
-        format.html { redirect_to @line_item, notice: 'Line item was successfully updated.' }
-        format.json { head :no_content }
+      if @line_item.save
+        format.html { redirect_to @line_item.cart, notice: 'Line item was successfully created.' }
+        format.js { @current_item = @line_item }
+        format.json { render json: @line_item, status: :created, location: @line_item }
       else
-        format.html { render action: "edit" }
+        format.html { render action: "new" }
         format.json { render json: @line_item.errors, status: :unprocessable_entity }
       end
-    end
+    end 
   end
 
   # DELETE /line_items/1

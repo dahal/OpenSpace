@@ -83,10 +83,6 @@ class CartsController < ApplicationController
   def destroy
     @cart = Cart.find(params[:id])
     @cart.destroy
-
-    respond_to do |format|
-      format.html { redirect_to carts_url }
-      format.json { head :no_content }
-    end
+    redirect_to :controller => "gallery", :action => "index"
   end
 end

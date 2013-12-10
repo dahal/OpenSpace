@@ -3,8 +3,7 @@
 <% else %>
 <tr>
 <% end %>
-	<td><%= line_item.quantity %> &times;</td>
-	<td><%= line_item.store.song_title %></td>
+	<td><%= line_item.month %> </td>
+	<td><%= line_item.list_space.city%> | <%= line_item.list_space.state%></td>
 	<td class="item_price"><%= line_item.total_price %></td>
 </tr>
-  

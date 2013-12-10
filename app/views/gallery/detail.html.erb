@@ -32,18 +32,34 @@
 		            <td><%= @space_detail.address1 %>, <%= @space_detail.address2 %><br/><%= @space_detail.city %>, <%= @space_detail.state %>-<%= @space_detail.zipcode %></td>
 		            <td></td> 
 		          </tr>
-
+ 				<form action="/line_items/create/<%= @space_detail.id %>" method="post">
 		          <tr> 
 		            <td>Book For</td>  
-		            <td>3 Months</td>
+		            <td>
+		            	
+		            	  
+		            	
+		            	<select name="no_of_months">
+						    <option value="1">1 Month</option>
+						    <option value="3">3 Months</option>
+						    <option value="6">6 Months</option>
+						    <option value="12">1 Year</option>
+						    <option value="24">2 Years</option>
+						</select>
+
+
+					</td>
 		            <td></td> 
 		          </tr>
 
 		          <tr>  
 		            <td></td>  
-		            <td><a class="btn btn-primary btn-large btn-block" href="/line_items/create/<%= @space_detail.id %>">Book Now</a></td>
+		            <td>
+
+		            	<button class="btn btn-primary btn-large btn-block" input type = "submit" value="Book Now">Book Now</button></td>
 		            <td></td> 
 		          </tr>
+		         </form >
 		        </tbody>  
 			</table>  
 	    </div>
