@@ -1,5 +1,7 @@
 OpenSpace::Application.routes.draw do
 
+  get "payment/checkout"
+
   resources :line_items
 
 

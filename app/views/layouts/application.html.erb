@@ -56,7 +56,13 @@
                     <% end %>       
                 </ul> <!-- /Sub menu -->
               </li>
-              <li><%= link_to "Cart", :controller => "booking_carts", :action => "booking_carts" %></li>
+              <li><%#= link_to "Cart", :controller => "carts/"+"#{session[:cart_id]}"%></li>
+              <li>
+                <%#= if session[:cart_id] == nil %>
+                  <%#= redirect_to :action=>"index", error: 'Cart is empty' %>
+                <%#= else %>
+                <%= link_to "Cart", :controller => "carts/#{session[:cart_id]}" %></li>
+                <%#= end %>
               </ul>
             </div><!--/.nav -->
           </div>

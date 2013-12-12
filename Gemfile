@@ -22,6 +22,7 @@ end
 
 gem 'jquery-rails'
 gem 'paperclip'
+gem 'stripe'
 #gem 'better_errors'
 
 # To use ActiveModel has_secure_password
