@@ -30,8 +30,18 @@
                             <%= button_to 'Continue Shopping', {:controller=>"gallery",:action=>"index"}, :class => "btn btn-default" %>
                         </td>
                         <td>
+                            <% if session[:user]%>
+                            <%= form_tag carts_path do %>
+                                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                                  data-description="A month's subscription"
+                                  data-amount="<%= @cart.total_price*100 %>"></script>
+                                  <input type="hidden" value="<%= @cart.total_price * 100%>" name="amount_to_capture">
 
-                            <%= button_to 'Pay Now', {:controller=>"payment",:action=>"checkout",:amount=>cart.total_price}, :class => "btn btn-success pull-right" %>
+                            <% end %>
+                            <% else %>
+                            <%= link_to "Login to Checkout", :controller=>"accounts",:action=>"login", :class => "btn btn-success" %>
+                            <% end %>
                         </td>
                     </tr>
                 </tbody>

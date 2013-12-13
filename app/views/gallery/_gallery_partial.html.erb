@@ -1,0 +1,16 @@
+
+
+<% @space_gallery.each do |space|%> 
+    <div class="demo-tiles">
+        <div class="col-md-4">
+            <div class="tile">
+                <h3 class="tile-title"><%= space.city %>  |  <%= space.state %></h3><br />
+    	        <%= image_tag space.image.url ,:height=>"320",:width=>"320" %><br />
+    	        <span><i class="fui-location"></i><%= space.address1 %>, <%= space.zipcode %></span><br />
+                <span><i class="fui-lock"></i>$ <%= space.price %> / Month</span><br>
+                <span><i class="fui-plus"></i><%= space.area %> Sq. Ft.</span><br>
+                <td><%= button_to 'View Details', {:controller=>"gallery",:action=>"detail",:id=>space.id}, :class=>"btn btn-danger btn-large btn-block" %></td>        
+            </div>
+        </div>
+    </div>
+<% end %> 
