@@ -41,9 +41,10 @@
               <li> 
                 <% if session[:user] %>
                 
-                  <%= link_to "Dashboard", :action => "dashboard" %>
+                  <%= link_to "Dashboard", :controller => "accounts", :action => "dashboard" %>
                 <% else %>
-                  <%= link_to "Account", :action => "login" %>
+                  <%= link_to "Account", :controller => "accounts", :action => "login" %>
+
                 <% end %>
                 <ul>
                   <% unless session[:user] %>

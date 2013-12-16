@@ -1,4 +1,5 @@
 class ListSpacesController < ApplicationController
+  before_filter :authorize
   layout "admin"
   # GET /list_spaces
   # GET /list_spaces.json
@@ -78,6 +79,15 @@ class ListSpacesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to list_spaces_url }
       format.json { head :no_content }
+    end
+  end
+
+  protected
+  def authorize
+    if session[:admin].nil?
+    flash[:notice] = "Something went wrong..."
+    redirect_to :controller => :gallery, :action => :index
+
     end
   end
 end

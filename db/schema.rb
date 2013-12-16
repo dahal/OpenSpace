@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(:version => 20131209053416) do
 
   create_table "list_spaces", :force => true do |t|
     t.text     "description"
-    t.decimal  "price",              :precision => 10, :scale => 0
+    t.decimal  "price"
     t.float    "area"
     t.string   "address1"
     t.string   "address2"
@@ -52,8 +52,8 @@ ActiveRecord::Schema.define(:version => 20131209053416) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.datetime "created_at",                                        :null => false
-    t.datetime "updated_at",                                        :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "users", :force => true do |t|

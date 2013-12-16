@@ -21,8 +21,13 @@ class AccountsController < ApplicationController
       session[:user]=@user.id
       if @user
         flash[:notice] = "Successfully signed in"
-        redirect_to :action=>"dashboard"
-        else
+            if session[:cart_id]
+              redirect_to :controller => "carts/#{session[:cart_id]}"
+            else
+              redirect_to :action=>"dashboard"
+            end
+        
+      else
           render :action =>"login"
           flash[:notice] = "Invalid email/password, try again"
       end
@@ -73,15 +78,9 @@ class AccountsController < ApplicationController
 
   def logout
     session[:user]=nil
+    session[:cart_id]=nil
     flash[:notice]="You are logged out"
     redirect_to :action=>"login"
-  end
-
-  def update
-    def edit
-    @user = User.find(params[:id])
-  end
-    
   end
 
 end

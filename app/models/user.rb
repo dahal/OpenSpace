@@ -33,4 +33,6 @@ class User < ActiveRecord::Base
   def encrypt(string) #2
  	Digest::SHA1.hexdigest(string) #Inbuilt module to enctypt the password
   end
+
+
 end
