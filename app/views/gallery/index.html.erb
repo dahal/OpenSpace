@@ -1,29 +1,33 @@
 
+    <div class="jumbotron">
+
+   
+    <center><%#= image_tag("logo.png", height: '110', width: '100', :class=>"img-responsive") %></center>
+    <h1 class="tile-title" style="color:white" >Have business in mind?</h2>
+    <h1 class="tile-title" style="color:black">Open your storefront at best place possible...</h1><br>
+    <!-- Search starts -->
+    <div class="col-md-3"></div>
+    <div class="col-lg-6">
+
+
+      <form action = "/gallery/search" method = "post" name = "search_now">
+        <div class="input-group">
+          <input type="text" name = "search" class="form-control" placeholder="Find the best spot, Search by City, State or Zipcode">
+          <span class="input-group-btn">
+            <button class="btn btn-success" type="button">Go!</button>
+          </span>
+        </div><!-- /input-group -->
+      </form>
+      </div><!-- /.col-lg-6 -->
+    <div class="col-md-3"></div>
+    <div class="col-md-3"></div>
+    <!-- Search ends -->
+    <br><br><br><br><br>
     
-          <div class="tile">
-            <br><br><br><br>
-            <h2>Have business in mind?</h2>
-            <h1 class="tile-title">Open your storefront at best place possible...</h1><br>
-            <!-- Search starts -->
-            <div class="col-md-3"></div>
-            <div class="col-lg-6">
-              <form action = "/gallery/search" method = "post" name = "search_now">
-                <div class="input-group">
-                  <input type="text" name = "search" class="form-control" placeholder="Find the best spot, Search by City, State or Zipcode">
-                  <span class="input-group-btn">
-                    <button class="btn btn-success" type="button">Go!</button>
-                  </span>
-                </div><!-- /input-group -->
-              </form>
-              </div><!-- /.col-lg-6 -->
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
-            <!-- Search ends -->
-            <br><br><br><br>
-            
-          </div>
-          <hr><!--/have a business in mind-->
+  </div>
+  <hr><!--/have a business in mind-->
 
-
-<h2 class="demo-section-title mbl pbl">Featured Places</h2>
-<%= render 'gallery_partial' %>          
+<div class="container">
+  <h2 class="demo-section-title mbl pbl">Featured Places</h2>
+  <%= render 'gallery_partial' %>          
+</div>

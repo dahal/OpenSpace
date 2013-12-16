@@ -3359,7 +3359,7 @@ input[type="button"].btn-block {
 .navbar-fixed-bottom .dropdown .dropdown-menu {
   top: auto;
   bottom: 100%;
-  margin-bottom: 1px;
+  margin-bottom: 0px;
 }
 
 @media (min-width: 768px) {
@@ -4123,7 +4123,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 @media (min-width: 768px) {
   .navbar {
-    border-radius: 4px;
+    border-radius: 0px;
   }
 }
 
@@ -4289,14 +4289,14 @@ textarea.input-group-sm > .input-group-btn > .btn {
   margin-bottom: 8px;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 0px;
 }
 
 .navbar-toggle .icon-bar {
   display: block;
   width: 22px;
   height: 2px;
-  border-radius: 1px;
+  border-radius: 0px;
 }
 
 .navbar-toggle .icon-bar + .icon-bar {
@@ -4695,7 +4695,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   margin-bottom: 20px;
   list-style: none;
   background-color: #f5f5f5;
-  border-radius: 4px;
+  border-radius: 0px;
 }
 
 .breadcrumb > li {
@@ -5000,23 +5000,53 @@ a.list-group-item.active > .badge,
   margin-left: 3px;
 }
 
-.jumbotron {
-  padding: 30px;
-  margin-bottom: 30px;
-  font-size: 21px;
-  font-weight: 200;
-  line-height: 2.1428571435;
-  color: inherit;
-  background-color: #eeeeee;
+ .jumbotron {
+     position: relative;
+     background: none;
+     padding: 30px;
+     margin-bottom: 5px;
+     font-size: 21px;
+     font-weight: 200;
+     line-height: 2.1428571435;
+     color: inherit;
+     height: 100%
+     
+ }
+ .jumbotron:after {
+     content:"";
+     background: url("jumbo.jpg");
+     background-repeat:no-repeat;
+     background-size: 100%;
+     background-position:center; 
+     opacity: 0.7;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     position: absolute;
+     z-index: -1;
+ }
+
+
+  
+
 }
 
 .jumbotron h1 {
   line-height: 1;
-  color: inherit;
+  color: #2ecc71;
+  text-align: center;
 }
 
+
+.jumbotron h2 {
+  line-height: 2;
+  color: inherit;
+  text-align: center;
+}
 .jumbotron p {
   line-height: 1.4;
+  text-align: center;
 }
 
 .container .jumbotron {

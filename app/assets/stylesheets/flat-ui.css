@@ -899,7 +899,7 @@ fieldset[disabled] .btn-link:focus {
 }
 .navbar {
   font-size: 16px;
-  border-radius: 6px;
+  border-radius: 0px;
   border: none;
 }
 .navbar .navbar-brand {
@@ -1101,6 +1101,7 @@ fieldset[disabled] .btn-link:focus {
 .navbar-inverse {
   background: #34495e;
   font-size: 17px;
+  margin-bottom:0
 }
 .navbar-inverse .navbar-brand {
   border-bottom: 2px solid #2c3e50;
@@ -1111,6 +1112,7 @@ fieldset[disabled] .btn-link:focus {
 .navbar-inverse .btn-navbar {
   color: #ffffff;
   margin: 7px 10px;
+
 }
 .navbar-inverse .btn-icon {
   margin: 8px 5px 8px 15px;
@@ -2824,6 +2826,8 @@ fieldset[disabled] .form-control + .input-icon,
 .tile-title {
   font-size: 20px;
   margin: 0;
+  color: #2ecc71;
+  text-align: center;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 2) {
   .tile.tile-hot:before {

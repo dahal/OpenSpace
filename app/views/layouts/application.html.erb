@@ -9,18 +9,17 @@
 
   <body>
 <!--### CONTAINER STARTS ###-->    
-    <div class="container">
+    <div class="container-fluid">
 
 <!-- NAVBAR STARTS -->
         <div class="navbar navbar-inverse">
-            <div class="navbar-header">
-                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-collapse-01"></button>
-            </div>            
+                       
             <div class="navbar-collapse collapse navbar-collapse">
               
               <ul class="nav navbar-nav navbar-left">
                 
                 <li>
+                    <%#= image_tag("logo.png", height: '35', width: '32') %>
                     <%= link_to "OpenSpace", root_path %>
                 </li>
                 
@@ -69,10 +68,47 @@
           </div>
 <!-- NAVBAR ENDS -->
 	
-		<%= yield %>
+		
     </div>
 <!--### CONTAINER ENDS ###-->
+   <%= yield %>
+   
+      <br/><br/><br/>
+    
 
 
   </body>
+  <div class="container-fluid">
+     <div class="navbar navbar-bottom navbar-inverse">
+       <div class="container">
+        <div class="row">
+         <div class="col-lg-4">
+           <ul><h6 style="color:white" >MENU</h6>
+             <li class="text-success">Blog</li>
+             <li class="text-success">About Us</li>
+             <li class="text-success">Contact Us</li>
+             <li class="text-success">How to Rent Spaces</li>
+             <li class="text-success">How to Rent Spaces</li>
+           </ul>
+         </div>
+         <div class="col-lg-4">
+           <ul><h6 style="color:white">ACCOUNT</h6>
+             <li class="text-success">Sign In</li>
+             <li class="text-success">Sign Up</li>
+             <li class="text-success">Forgot Password</li>
+             <li class="text-success">Dashboard</li>
+           </ul>
+         </div>
+         <div class="col-lg-4">
+           <h6 style="color:white">FOLLOW US</h6>
+             <%= image_tag("facebook.png", height: '32', width: '32') %> <a>Facebook</a><br/>
+             <%= image_tag("twitter.png", height: '32', width: '32') %> <a>Twitter</a><br/>
+             <%= image_tag("instagram.png", height: '32', width: '32') %> <a>Instagram</a><br/>
+             <%= image_tag("youtube.png", height: '32', width: '32') %> <a>Youtube</a>
+         </div>
+       </div>
+       <center><span style = "color:gray">Copyright: OpenSpace.co | Terms | Privacy Policy</span></center>
+      </div>
+     </div>
+   </div>
 </html>
