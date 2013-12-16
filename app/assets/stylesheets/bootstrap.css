@@ -5014,7 +5014,7 @@ a.list-group-item.active > .badge,
  }
  .jumbotron:after {
      content:"";
-     background: url("jumbo.jpg");
+     background: url("jumbo2.jpg");
      background-repeat:no-repeat;
      background-size: 100%;
      background-position:center; 
