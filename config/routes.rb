@@ -1,5 +1,13 @@
 OpenSpace::Application.routes.draw do
 
+  get "page/contact"
+
+  get "page/about"
+
+  get "page/tos"
+
+  get "page/howitworks"
+
   get "payment/checkout"
 
   resources :line_items
