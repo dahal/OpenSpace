@@ -1,4 +1,5 @@
 class CartsController < ApplicationController
+  layout "fixed_bottom_navbar"
   # GET /carts
   # GET /carts.json
   def index

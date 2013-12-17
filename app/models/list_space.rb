@@ -8,7 +8,7 @@ class ListSpace < ActiveRecord::Base
   after_validation :geocode#, :if => :address_changed?
 
   def address
-  	[address1, address2, city, state, zipcode].reject{|l| l.blank?}.join('</br>')
+  	[address1, address2, city, state, zipcode].reject{|l| l.blank?}.join(', ')
   end
 
 end

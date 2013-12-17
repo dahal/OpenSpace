@@ -9,14 +9,14 @@
     <div class="col-md-3"></div>
     <div class="col-lg-6">
       
-      <form action = "/gallery/search" method = "post" name = "search_now">
-          <div class="input-group">
-            <input type="text" name = "search" class="form-control" placeholder="Find the best spot, Search by City, State or Zipcode">
-            <span class="input-group-btn">
-              <button class="btn btn-success" type="button">SEARCH NOW</button>
-            </span>
-          </div><!-- /input-group -->
-        </form><br/>
+      <form id="search_near_by" name = "search" action = "/gallery/search_nearby">
+        <div class="input-group">
+          <input type="text" name = "search" class="form-control" placeholder="Find the best spot, Search by City, State or Zipcode">
+          <span class="input-group-btn">
+            <button class="btn btn-success" type="button">SEARCH NOW</button>
+          </span>
+        </div><!-- /input-group -->
+      </form><br/>
       <center> 
         <button class="btn btn-inverse btn-lg"><strong>LIST SPACE NOW</strong></button>
         <button class="btn btn-inverse btn-lg"><strong>BOOK SPACE NOW</strong></button>
