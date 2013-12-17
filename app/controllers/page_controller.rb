@@ -1,4 +1,5 @@
 class PageController < ApplicationController
+	layout "fixed_bottom_navbar"
   def contact
   end
 
