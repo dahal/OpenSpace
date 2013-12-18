@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  layout "fixed_bottom_navbar"
+  
   #layout "fixed_bottom_navbar"
   # GET /carts
   # GET /carts.json
