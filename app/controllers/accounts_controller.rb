@@ -1,4 +1,5 @@
 class AccountsController < ApplicationController
+  layout "fixed_bottom_navbar"
   def signup
    	@user = User.new
     if request.post?

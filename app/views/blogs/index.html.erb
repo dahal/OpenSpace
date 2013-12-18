@@ -1,11 +1,45 @@
   <!--BLOG INDEX PAGE STARTS -->
-    <!-- Blog TILES STARTS -->
+    <!-- Blog TILES STARTS
       <div class="tile">
+        <br><br>
         <h2>OpenSpace</h2>
         <h1 class="tile-title">Blog</h1><br>
       </div>
       <hr>
-    <!-- Blog TILES ENDS -->
+    Blog TILES ENDS -->
+    <div class="jumbotron visible-desktop">
+
+   <br/>
+    <center><%#= image_tag("logo.png", height: '110', width: '100', :class=>"img-responsive") %>
+    <h2 style="color:black" >Blog</h2>
+    
+    </center>
+    <!-- Search starts -->
+    <div class="col-md-3"></div>
+    <div class="col-lg-6">
+      
+      <form id="search_near_by" name = "search" action = "/gallery/search_nearby">
+        <div class="input-group">
+          <input type="text" name = "search" class="form-control" placeholder="Find the best spot, Search by City, State or Zipcode">
+          <span class="input-group-btn">
+            <button class="btn btn-success" type="button">SEARCH NOW</button>
+          </span>
+        </div><!-- /input-group -->
+      </form><br/>
+      <center> 
+        <button class="btn btn-inverse btn-lg"><strong>LIST SPACE NOW</strong></button>
+        <button class="btn btn-inverse btn-lg"><strong>BOOK SPACE NOW</strong></button>
+      </center>
+    </div><!-- /.col-lg-6 -->
+    <div class="col-md-3"></div>
+    <div class="col-md-3"></div>
+    <!-- Search ends -->
+    <br><br><br>
+    
+</div>
+
+
+
 
     <!--blog content starts-->
     <div class = "container">
@@ -34,10 +68,10 @@
                 <h5>Social Media</h5>
               </div>
               <div class="panel-body">
-                <p>Facebook</p><hr>
-                <p>Twitter</p><hr>
-                <p>Google Plus</p><hr>
-                <p>Instagram</p><hr>
+                <a class="twitter-timeline" href="https://twitter.com/search?q=%23rubyonrails" data-widget-id="413165360129376257">Tweets about "#rubyonrails"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
               </div>
           </div>
 
