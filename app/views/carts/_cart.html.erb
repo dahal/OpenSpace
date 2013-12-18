@@ -1,3 +1,4 @@
+<br/><br/><br/><br/>
 <% unless cart.line_items.empty? %>
 <div class="container">
     <div class="row">
@@ -36,9 +37,10 @@
                                   class="stripe-button"
                                   data-billing-address="active"
                                   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                                  data-description="A month's subscription"
-                                  data-amount="<%= (@cart.total_price * 100).to_i %>"></script>
-                                  <input type="hidden" value="<%= (@cart.total_price * 100).to_i %>" name="amount_to_capture">
+                                  data-description="Payment secured by Stripe.com"
+                                  data-amount="<%= (@cart.total_price * 100).to_i %>">
+                                </script>
+                                <input type="hidden" value="<%= (@cart.total_price * 100).to_i %>" name="amount_to_capture">
 
                             <% end %>
                             <% else %>
@@ -81,5 +83,5 @@
 
 <% 
 =end %>
-
+<br/><br/><br/><br/>
 

@@ -1,8 +1,5 @@
 <br/><br/><br/>
 
-<%#= javascript_include_tag "bootstrap" %>
-
-
 
 
 
@@ -14,23 +11,23 @@
 
 				<ul class="nav nav-tabs" id="myTab">
 				  <h4><%= @space_detail.city %> | <%= @space_detail.state %></h4>
-				  <li class="active"><a href="#home" data-toggle="tab">Picture</a></li>
-				  <li><a href="#profile" data-toggle="tab">Map</a></li>
-				  <li><a href="#messages" data-toggle="tab">Stree View</a></li>
+				  <li class="active"><a href="#pic" data-toggle="tab">Picture</a></li>
+				  <li><a href="#gmap" data-toggle="tab">Map</a></li>
+				  <li><a href="#gstreet" data-toggle="tab">Stree View</a></li>
 				  
 				</ul>
 
 				<div class="tab-content">
-				  <div class="tab-pane active" id="home">
+				  <div class="tab-pane active" id="pic">
 					<%= image_tag @space_detail.image.url ,:height=>"600",:width=>"600" %><br />
 					<!--<img src="http://placehold.it/600x600"><br>-->
 				  </div> <!--/PICTURE-->
-				  <div class="tab-pane" id="profile">
+				  <div class="tab-pane" id="gmap">
+				  	
 				  	<%= image_tag "http://maps.google.com/maps/api/staticmap?size=600x600&sensor=false&zoom=16&markers=#{@space_detail.latitude}%2C#{@space_detail.longitude}" %>
 				  </div><!--/GOOGLE MAP-->
-				  <div class="tab-pane" id="messages">
-				  	<%#= image_tag "http://maps.googleapis.com/maps/api/streetview?size=600x600&location=#{@space_detail.latitude},#{@space_detail.longitude}&fov=90&heading=235&pitch=10&sensor=false" %>
-
+				  <div class="tab-pane" id="gstreet">
+				  	
 				  	<iframe width="600" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=7055+Hollister+Street,+Houston,+TX&amp;aq=0&amp;oq=7055+Hollister+St&amp;sll=37.37089,-121.967552&amp;sspn=0.239013,0.504341&amp;ie=UTF8&amp;hq=&amp;hnear=7055+Hollister+Rd,+Houston,+Texas+77040&amp;ll=29.862346,-95.50593&amp;spn=0.008151,0.015761&amp;t=m&amp;z=14&amp;layer=c&amp;cbll=29.862858,-95.506315&amp;panoid=tKiEjlJhlG9iJP62ets0bg&amp;cbp=12,245.58,,0,9.5&amp;output=svembed"></iframe>
 				  </div><!--STREET VIEW -->
 				  
@@ -42,9 +39,6 @@
 				  })
 				</script>
 
-
-
-			
 			</div>
 		</div>
 
@@ -109,7 +103,7 @@
 	<div class="container"><!--DIV for container starts here -->
 			<div class="col-md-12">		
 				<h4>Desctiption</h4><br/>
-				<p>Desctiption paragraph</p>		
+				<p><%= @space_detail.description %></p>		
 			</div>
 	</div> <!--DIV for container ends -->
 	<!--Description ends here-->
@@ -120,7 +114,7 @@
 <div class="container">
 	<h4>Nearby locations</h4>
 	<ul>
-	<% for list_space in @space_detail.nearbys(10) %>
+	<% for list_space in @space_detail.nearbys(50) %>
 	  <li>
 	  	<%= link_to list_space.address, list_space %> (<%= list_space.distance.round(2) %> miles)
 	  	<!--<%#= link_to (list_space.address), :controller=>"gallery",:action=>"detail",:id=>space.id %> (<%#= list_space.distance.round(2) %> miles)-->
