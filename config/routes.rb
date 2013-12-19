@@ -1,5 +1,11 @@
 OpenSpace::Application.routes.draw do
 
+  get "lister/login"
+
+  get "lister/signup"
+
+  get "lister/forgot_password"
+
   get "page/contact"
 
   get "page/about"
@@ -9,6 +15,10 @@ OpenSpace::Application.routes.draw do
   get "page/howitworks"
 
   get "payment/checkout"
+
+  get "/login", :controller => "accounts", :action => "login"
+
+  get "/blog", :controller => "blogs", :action => "index"
 
   resources :line_items
 

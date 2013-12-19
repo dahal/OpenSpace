@@ -1,5 +1,5 @@
 class ListSpacesController < ApplicationController
-  before_filter :authorize
+  
   layout "admin"
   # GET /list_spaces
   # GET /list_spaces.json
